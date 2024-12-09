@@ -1,0 +1,65 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  
+  <!-- Eine Reihe von Eingabefeldern für E-Mail und Passwort -->
+  <div class="form-row">
+    <!-- E-Mail-Eingabefeld -->
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <!-- Eingabefeld für die E-Mail-Adresse -->
+      <input type="email" class="form-control" id="inputEmail4" formControlName="email" placeholder="Email..." required>
+    </div>
+    <!-- Passwort-Eingabefeld -->
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Passwort</label>
+      <!-- Eingabefeld für das Passwort -->
+      <input type="password" class="form-control" id="inputPassword4" formControlName="password" placeholder="Passwort..." required>
+    </div>
+  </div>
+  
+  <!-- Eingabefeld für die Adresse -->
+  <div class="form-group">
+    <label for="inputAddress">Adresse</label>
+    <!-- Eingabefeld für die Adresse -->
+    <input type="text" class="form-control" id="inputAddress" formControlName="address" placeholder="Adresse angeben..." required>
+  </div>
+  
+  <!-- Eingabefeld für den Adresszusatz -->
+  <div class="form-group">
+    <label for="inputAddress2">Addresszusatz</label>
+    <!-- Eingabefeld für den Adresszusatz -->
+    <input type="text" class="form-control" id="inputAddress2" formControlName="addressSupplement" placeholder="Etage...">
+  </div>
+  
+  <!-- Eine weitere Reihe von Eingabefeldern für Stadt, Land und Postleitzahl -->
+  <div class="form-row">
+    <!-- Eingabefeld für die Stadt -->
+    <div class="form-group col-md-6">
+      <label for="inputCity">Stadt</label>
+      <input type="text" class="form-control" id="inputCity" formControlName="city" required>
+    </div>
+    <!-- Eingabefeld für das Land -->
+    <div class="form-group col-md-4">
+      <label for="inputState">Land</label>
+      <input type="text" class="form-control" id="inputState" formControlName="state" required>          
+    </div>
+    <!-- Eingabefeld für die Postleitzahl -->
+    <div class="form-group col-md-2">
+      <label for="inputZip">Postleitzahl</label>
+      <input type="text" class="form-control" id="inputZip" formControlName="zip" required>
+    </div>
+  </div>
+  
+  <!-- Checkbox für die Zustimmung -->
+  <div class="form-group">
+    <div class="form-check">
+      <!-- Checkbox-Input für die Zustimmung -->
+      <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="accepted" required>
+      <label class="form-check-label" for="gridCheck">
+        Akzeptieren
+      </label>
+    </div>
+  </div>
+  
+  <!-- Absenden-Button für das Formular -->
+  <button type="submit" class="btn btn-primary">Einloggen</button>
+</form>
